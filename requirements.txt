@@ -117,7 +117,6 @@ python-engineio==4.4.0
 python-multipart==0.0.6
 python-socketio==5.8.0
 pytz==2022.7.1
-pywin32==305
 PyYAML==6.0
 pyzmq==25.0.1
 regex==2022.10.31
