@@ -26,13 +26,12 @@ jobs:
         run: |
           python -m venv venv
           source venv/bin/activate
-          python -m app.py
+          python app.py
       
       - name: Install dependencies
         run: pip install -r requirements.txt
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
-      
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v2
         with:
@@ -40,7 +39,7 @@ jobs:
           path: |
             . 
             !venv/
-
+          run: python app.py
   deploy:
     runs-on: ubuntu-latest
     needs: build
@@ -54,7 +53,6 @@ jobs:
         with:
           name: python-app
           path: .
-          
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
@@ -62,3 +60,4 @@ jobs:
           app-name: 'chatbotopenai'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9178A80D1E074774B23B3425EC8CA740 }}
+		
