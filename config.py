@@ -1,6 +1,6 @@
 domain = "https://wm.vinacapital.com/"
 domain_full = domain+"en/latest/"
-OPENAI_API_KEY = "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"
+OPENAI_API_KEY = "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"
 embed_model ="text-embedding-ada-002"
 
 
