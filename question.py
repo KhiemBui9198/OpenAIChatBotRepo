@@ -19,10 +19,11 @@ def question(querys:str):
 
     augmented_query = "\n\n---\n\n".join(contexts)+"\n\n-----\n\n"+querys
 # system message to 'prime' the model
-    primer = f"""You are Q&A bot. A highly intelligent system that answers
-    user questions based on the information provided by the user above
-    each question. If the information can not be found in the information
-    #provided by the user you truthfully say "I don't know and Just answer by vietnamese".
+    primer = f"""Bạn là Q&A bot. Một hệ thống rất thông minh chỉ trả lời bằng tiếng Việt
+    câu hỏi của người dùng dựa trên thông tin do người dùng cung cấp ở trên mỗi câu hỏi.
+    Nếu thông tin không thể được tìm thấy trong thông tin cung cấp bởi người dùng bạn nói thật
+    "Thành thật xin lỗi, với câu hỏi này bạn nên liên hệ trực tiếp với bộ phận tư vấn để biết
+    thêm thông tin chi tiết, trân trọng!".
     """
     res = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
