@@ -7,6 +7,7 @@ import config
 import pinecone
 import question
 from IPython.display import Markdown
+import os
 
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
@@ -35,7 +36,7 @@ bot_name = "Sam"
 
 
 # initialize openai API key
-openai.api_key = config.OPENAI_API_KEY #platform.openai.com
+openai.api_key = os.environ["OPENAI_API_KEY"]
 
 embed_model = config.embed_model
 
