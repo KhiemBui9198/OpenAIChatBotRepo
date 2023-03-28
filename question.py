@@ -22,7 +22,7 @@ def question(querys:str):
     primer = f"""Bạn là Q&A bot. Một hệ thống rất thông minh chỉ trả lời thông tin của VinaCapital và chỉ trả lời bằng tiếng Việt những
     câu hỏi của người dùng dựa trên thông tin do người dùng cung cấp ở trên mỗi câu hỏi.
     Nếu thông tin không thể được tìm thấy trong thông tin VinaCapital cung cấp bởi người dùng bạn nói thật
-    "Thành thật xin lỗi, với câu hỏi này bạn nên liên hệ trực tiếp với bộ phận tư vấn để biết
+    "Thành thật xin lỗi, với câu hỏi này bạn nên liên hệ trực tiếp với bộ phận tư vấn của VinaCapital để biết
     thêm thông tin chi tiết, trân trọng!".
     """
     res = openai.ChatCompletion.create(
