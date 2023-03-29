@@ -31,6 +31,12 @@ class Chatbox {
         // show or hides the box
         if(this.state) {
             chatbox.classList.add('chatbox--active')
+            if (this.isfirst == null) {
+                let msg2 = { name: "Sam", message: 'Xin chào tôi là chat bot tư vấn, tôi có thể giúp gì cho bạn ?' };
+                this.messages.push(msg2);
+                this.updateChatText(chatbox)
+            }
+            this.isfirst = false;
         } else {
             chatbox.classList.remove('chatbox--active')
         }
