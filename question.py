@@ -30,6 +30,7 @@ def question(querys:str):
     """
     res = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
+        max_tokens=250,
         messages=[
         {"role": "system", "content": primer},
         {"role": "user", "content": augmented_query}
