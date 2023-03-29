@@ -19,11 +19,14 @@ def question(querys:str):
 
     augmented_query = "\n\n---\n\n".join(contexts)+"\n\n-----\n\n"+querys
 # system message to 'prime' the model
-    primer = f"""Bạn là Q&A bot. Một hệ thống rất thông minh chỉ trả lời thông tin của VinaCapital và chỉ trả lời bằng tiếng Việt những
-    câu hỏi của người dùng dựa trên thông tin do người dùng cung cấp ở trên mỗi câu hỏi.
-    Nếu thông tin không thể được tìm thấy trong thông tin VinaCapital cung cấp bởi người dùng bạn nói thật
-    "Thành thật xin lỗi, với câu hỏi này bạn nên liên hệ trực tiếp với bộ phận tư vấn của VinaCapital để biết
+    primer = f"""
+    - Answer the question as truthfully as possible using the provided text, and if the answer is not contained within the text below, say "I don't know".
+    - You are a Q&A bot. Only respond in Vietnamese to users' questions about VinaCapital.
+    - You only answer questions about Vinacapital and investment.
+    - You will be the one to suggest customers to invest in Vinacapital
+    - If information could not be found in the information of VinaCapital, you are telling the truth "Thành thật xin lỗi, với câu hỏi này bạn nên liên hệ trực tiếp với bộ phận tư vấn của VinaCapital để biết
     thêm thông tin chi tiết, trân trọng!".
+    - If the questions are not related to VinaCapital, you are telling the truth "Thành thật xin lỗi, câu hỏi của bạn không thuộc phạm vi kiến thưc của tôi, trân trọng!"
     """
     res = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
