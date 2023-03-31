@@ -73,7 +73,8 @@ class Chatbox {
             }).catch((error) => {
                 console.error('Error:', error);
                 this.updateChatText(chatbox)
-                textField.value = ''
+                textField.value = '';
+                this.hideElem();
             });
     }
 
