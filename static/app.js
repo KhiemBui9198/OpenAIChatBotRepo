@@ -48,7 +48,7 @@ class Chatbox {
         if (text1 === "") {
             return;
         }
-
+        textField.value = '';
         let msg1 = { name: "User", message: text1 }
         this.messages.push(msg1);
 
