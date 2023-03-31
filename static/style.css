@@ -655,6 +655,9 @@ h6,
     padding-top: 20px;
     padding-left: 20px;
 }
+div#myTyping{
+    margin-left: 25px;
+}
 .back-to-top {
     position: fixed;
     display: none;
