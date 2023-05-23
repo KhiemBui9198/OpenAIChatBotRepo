@@ -6,5 +6,5 @@ embed_model ="text-embedding-ada-002"
 
 
 pinecone_index_name= 'gpt-4-langchain-docs'
-pinecone_api_key = "9abf60de-a00a-4302-abfa-8d5279584f38"
+pinecone_api_key = "f9a8c0c0-6350-47cc-a666-c0bac9471e72"
 pinecone_environment = "us-central1-gcp"
