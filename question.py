@@ -29,7 +29,7 @@ def question(querys:str):
     - If the questions are not related to VinaCapital, you are telling the truth "Thành thật xin lỗi, câu hỏi của bạn không thuộc phạm vi kiến thưc của tôi, trân trọng!"
     """
     res = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo",
+    model="gpt-4",
         max_tokens=250,
         messages=[
         {"role": "system", "content": primer},
