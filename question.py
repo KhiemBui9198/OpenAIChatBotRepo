@@ -7,6 +7,7 @@ import getindex
 
 def question(querys:str):
     res = openai.Embedding.create(
+        temperature=0.9,
         input=[querys],
         engine=config.embed_model
     )
